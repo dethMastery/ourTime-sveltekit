@@ -1,4 +1,6 @@
-const mainImage = [
+import type mainInterface from "../interface/mainInterface"
+
+const mainImage: mainInterface[] = [
   {
     img: "https://be.000198.xyz/file/2023-08-2623:04:47.641488+00:001684861200000.webp",
     title: 'first time after a looong time <3',
