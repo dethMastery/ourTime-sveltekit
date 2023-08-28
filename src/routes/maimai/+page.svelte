@@ -1,5 +1,6 @@
 <script lang="ts">
-  import Card from "../../components/card.svelte";
+  import ModalCard from "../../components/modalCard.svelte";
+  import Modal from '../../components/modal.svelte'
 	import maimaiContents from "../../constants/maimai_content";
 </script>
 
@@ -14,10 +15,16 @@
   <meta property="og:title" content="maimai | ourTime" />
   <meta property="og:description" content="A list of our pictures while playing maimai ❤️" />
   <!-- <meta property="og:image" content="" /> -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
 </svelte:head>
 
 <section class="flex flex-row w-full md:w-[80%] mx-auto pt-16 pb-8 flex-wrap gap-4 justify-center">
   {#each maimaiContents.reverse() as data }
-    <Card {data} />
+    <ModalCard {data} />
+  {/each}
+
+  {#each maimaiContents as data}
+    <Modal {data} />
   {/each}
 </section>
