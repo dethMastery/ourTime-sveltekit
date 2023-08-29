@@ -3,7 +3,7 @@
   import TW_CLASS from "../constants/tailwind_class";
 </script>
 
-{#if $page.url.pathname === '/'}
+{#if $page.url.pathname === '/' || $page.url.pathname === '/about'}
   <footer class="w-full py-5 fixed bottom-0 text-center bg-gradient-to-t from-[rgba(0,0,0,1)] to-[rgba(0,0,0,0)]">
     <p>
       &copy; 2023 
